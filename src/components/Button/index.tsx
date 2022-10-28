@@ -14,10 +14,8 @@ export const Button: React.FC<IButton> = (props: IButton) => {
   };
 
   return (
-    // <span className="button" style={style}>
     <Link className="button" style={style} to={props.to}>
       {props.title}
     </Link>
-    // </span>
   );
 };

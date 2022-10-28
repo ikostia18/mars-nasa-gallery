@@ -1,0 +1,54 @@
+.main-wrapper {
+  margin: 15px;
+  font-family: var(--fontFamily);
+}
+
+.first-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-area {
+  width: 500px;
+}
+
+.right-area {
+  width: 700px;
+  margin: 0 25px;
+  position: relative;
+}
+
+.text-info {
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+.button-wrapper {
+  position: absolute;
+  bottom: 0px;
+  padding-bottom: 20px;
+  margin-left: -6px;
+}
+
+.second-section {
+  width: 1200px;
+  margin-top: 50px;
+}
+
+.carousel-header {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.inner-text {
+  color: var(--themeMarsColorMedium);
+}
+
+.page-seq {
+  color: #757575;
+  text-align: right;
+  font-size: 12px;
+}

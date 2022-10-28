@@ -1,0 +1,11 @@
+.image {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  font-family: var(--fontFamily);
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}

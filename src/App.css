@@ -1,3 +1,10 @@
+:root {
+  --fontFamily: Helvetica, Arial, sans-serif;
+  --themeMarsColorLight: #ded6c9;
+  --themeMarsColorMedium: #dac9b6;
+  /* --themeMarsColorDark: */
+}
+
 .App {
   margin: 15px;
 }
