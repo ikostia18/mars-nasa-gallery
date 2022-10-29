@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './pages/About/About';
-import Gallery from './pages/Gallery';
+import Gallery from './pages/Gallery/Gallery';
 import NotFound from './pages/NotFound';
 import Weather from './pages/Weather';
 

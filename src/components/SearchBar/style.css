@@ -1,0 +1,32 @@
+.search-bar-title {
+  font-size: 14px;
+}
+
+.search-bar {
+  font-family: var(--fontFamily);
+}
+
+.input-date {
+  font-family: var(--fontFamily);
+  color: #000000;
+  text-align: center;
+  cursor: pointer;
+  width: 120px;
+  margin-left: 4px;
+  padding: 2px;
+  border: 1px solid gray;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-button {
+  background-color: var(--themeMarsColorMedium);
+  border: 1px solid gray;
+  border-radius: 0 5px 5px 0;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.search-button::after {
+  content: '  🔎';
+  font-size: 10px;
+}

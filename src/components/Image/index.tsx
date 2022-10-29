@@ -17,7 +17,7 @@ export const Image: React.FC<IImage> = (props: IImage) => {
   };
 
   return (
-    <div className={`image ${props.className}`}>
+    <div className={`image ${props.className ? props.className : ''}`}>
       <img src={props.src} style={style} alt={props.alt ?? 'mars-image'} />
       {props.description && (
         <div className="description">{props.description}</div>

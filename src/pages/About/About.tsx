@@ -1,13 +1,15 @@
 import { Header } from '../../components/Header';
-import { Button } from '../../components/Button';
+import { NavButton } from '../../components/NavButton';
 import { Image } from '../../components/Image';
 import './style.css';
 import {
   API_KEY,
   API_NASA_MARS_CURIOSITY_PHOTOS,
-  CURIOSITY_INFO,
+  // CURIOSITY_INFO_SHORT,
+  CURIOSITY_INFO_LONG,
   EARTH_DATE,
   PAGE_1,
+  SPECIFIC_DATE,
 } from '../../utils/constants';
 import { useState, useEffect } from 'react';
 import { Carousel } from '../../components/Carousel';
@@ -26,6 +28,7 @@ function About() {
       API_NASA_MARS_CURIOSITY_PHOTOS +
       '?' +
       EARTH_DATE +
+      SPECIFIC_DATE +
       '&' +
       PAGE_1 +
       '&' +
@@ -38,7 +41,7 @@ function About() {
         setIsLoading(false);
       })
       .catch((error) => {
-        console.log('Fetching data error: ', error);
+        console.error('Fetching data error: ', error);
         setIsLoading(false);
       });
   };
@@ -54,13 +57,17 @@ function About() {
           />
         </div>
         <div className="right-area">
-          <Tooltip content={CURIOSITY_INFO}>
-            <div className="text-info">{CURIOSITY_INFO}</div>
+          {/* Just a test to validate tooltip is disabled with !isOverFlown */}
+          {/* <Tooltip content={CURIOSITY_INFO_SHORT}>
+            <div className="text-info">{CURIOSITY_INFO_SHORT}</div>
+          </Tooltip> */}
+          <Tooltip content={CURIOSITY_INFO_LONG}>
+            <div className="text-info">{CURIOSITY_INFO_LONG}</div>
           </Tooltip>
 
           <div className="button-wrapper">
-            <Button to="/gallery" title="View Images By Date" />
-            <Button to="/weather" title="View Weather" />
+            <NavButton to="/gallery" title="View Images By Date" />
+            <NavButton to="/weather" title="View Weather" />
           </div>
         </div>
       </div>
