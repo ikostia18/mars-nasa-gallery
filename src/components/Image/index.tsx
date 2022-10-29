@@ -3,7 +3,7 @@ import './style.css';
 
 interface IImage {
   src: string;
-  width?: string;
+  width?: number;
   alt?: string;
   description?: string;
   className?: string;
@@ -13,6 +13,7 @@ interface IImage {
 export const Image: React.FC<IImage> = (props: IImage) => {
   const style: React.CSSProperties = {
     ...props.style,
+    maxHeight: 150,
     width: props.width ?? IMAGE_WIDTH,
   };
 

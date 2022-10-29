@@ -1,17 +1,35 @@
 .gallery-wrapper {
   display: inline-grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 20px;
+  grid-gap: 25px;
   margin-top: 15px;
 }
 
 .image-item {
-  width: 200px;
 }
 
 .loading-section {
   width: 1200px;
-  margin-top: 20px;
+  margin-top: 15px;
+}
+
+.bottom-nav-bar {
+  text-align: right;
+  position: absolute;
+  width: 950px;
+  bottom: 70px;
+}
+
+.nav-number {
+  font-family: var(--fontFamily);
+  font-size: 12px;
+  color: #808080;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px 10px;
 }
 
 .button-wrapper {
