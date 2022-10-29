@@ -1,0 +1,18 @@
+.tooltip-Wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.tooltip-Tip {
+  position: absolute;
+  z-index: 100;
+  color: #000000;
+  font-family: var(--fontFamily);
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 6px;
+  left: 30%;
+  transform: translate(50%, 100%);
+  background: var(--themeMarsColorLight);
+  bottom: calc(30px * -1);
+}
