@@ -38,9 +38,33 @@
   margin-top: 50px;
 }
 
-.carousel-header {
+.second-section-header {
   font-size: 22px;
   font-weight: 600;
+}
+
+.carousel-wrapper {
+  display: flex;
+}
+
+.carousel-container {
+  margin-top: 15px;
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel-item {
+  width: 220px;
+  padding: 0 6px;
+}
+
+.carousel-nav {
+  color: var(--themeMarsColorDark);
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  cursor: pointer;
 }
 
 .inner-text {

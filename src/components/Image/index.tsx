@@ -6,15 +6,18 @@ interface IImage {
   width?: string;
   alt?: string;
   description?: string;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
 export const Image: React.FC<IImage> = (props: IImage) => {
   const style: React.CSSProperties = {
+    ...props.style,
     width: props.width ?? IMAGE_WIDTH,
   };
 
   return (
-    <div className="image">
+    <div className={`image ${props.className}`}>
       <img src={props.src} style={style} alt={props.alt ?? 'mars-image'} />
       {props.description && (
         <div className="description">{props.description}</div>

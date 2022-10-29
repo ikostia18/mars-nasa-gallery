@@ -13,6 +13,13 @@ Curiosity explores Gale Crater and acquires rock, soil, and air samples for onbo
 Curiosity carries the biggest, most advanced instruments for scientific studies ever sent to the Martian surface. The history of Martian climate and geology is written in the chemistry and structure of the rocks and soil. Curiosity reads this record by analyzing powdered samples drilled from rocks. It also measures the chemical fingerprints present in different rocks and soils to determine their composition and history, especially their past interactions with water.
 Mars Science Laboratory arrived at Mars through technological innovations that tested a completely new landing method. The spacecraft descended on a parachute, then during the final seconds before landing, the landing system fired rockets to allow it to hover while a tether lowered Curiosity to the surface. The rover landed on its wheels, the tether was cut, and the landing system flew off to crash-land a safe distance away.`;
 
-export const API_KEY = '68T7GJyvN3hVkihV7n8Q1T81CEK1OQPxrdzRHRlM';
+// https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2020-07-14&api_key=68T7GJyvN3hVkihV7n8Q1T81CEK1OQPxrdzRHRlM
 
-export enum ENUM {}
+export const API_NASA_MARS_CURIOSITY_PHOTOS =
+  'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos';
+export const EARTH_DATE = 'earth_date=2020-07-14';
+export const PAGE_1 = 'page=1';
+
+export const API_KEY = 'api_key=68T7GJyvN3hVkihV7n8Q1T81CEK1OQPxrdzRHRlM';
+
+// export enum ENUM {}
