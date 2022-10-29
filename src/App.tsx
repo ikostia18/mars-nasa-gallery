@@ -3,7 +3,7 @@ import './App.css';
 import About from './pages/About/About';
 import Gallery from './pages/Gallery/Gallery';
 import NotFound from './pages/NotFound';
-import Weather from './pages/Weather';
+import Weather from './pages/Weather/Weather';
 
 function App() {
   return (

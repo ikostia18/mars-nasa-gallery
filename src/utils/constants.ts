@@ -28,6 +28,10 @@ export const EARTH_DATE = 'earth_date=';
 export const SPECIFIC_DATE = '2020-07-14';
 export const PAGE_1 = 'page=1';
 
+// https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY&feedtype=json&ver=1.0
+// export const API_NASA_MARS_CURIOSITY_WEATHER =
+//   'https://api.nasa.gov/insight_weather/?feedtype=json&ver=1.0';
+
 export const API_KEY = 'api_key=68T7GJyvN3hVkihV7n8Q1T81CEK1OQPxrdzRHRlM';
 
 // export enum ENUM {}
