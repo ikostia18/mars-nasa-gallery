@@ -16,7 +16,7 @@ export const Tooltip: React.FC<ITooltip> = (props: ITooltip) => {
   const showTip = () => {
     timeout = setTimeout(() => {
       setActive(true);
-    }, props.delay || 400);
+    }, props.delay || 1000);
   };
 
   const hideTip = () => {

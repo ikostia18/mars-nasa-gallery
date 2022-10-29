@@ -3,13 +3,14 @@ import { Header } from '../../components/Header';
 import { Image } from '../../components/Image';
 import { NavButton } from '../../components/NavButton';
 import { SearchBar } from '../../components/SearchBar';
+// import { Tooltip } from '../../components/Tooltip';
 import { GO_HOME, NUMBER_OF_ITEMS_PER_PAGE } from '../../utils/constants';
 import './style.css';
 
 function Gallery() {
   const [images, setImages] = useState<any>();
   const [numberOfPages, setNumberOfPages] = useState(1);
-  const [pageNumber, setPageNumber] = useState(1);
+  const [pageNumber, setPageNumber] = useState(0);
   const [imagesPerPage, setImagesPerPage] = useState<any>();
   let tempArray: any[] = [];
 
@@ -31,7 +32,13 @@ function Gallery() {
     const bar = [];
     for (let i = 0; i < numberOfPages; i++) {
       bar.push(
-        <span className="nav-number" onClick={() => setPageNumber(i)}>
+        <span
+          key={i}
+          className={`nav-number ${
+            pageNumber === i ? 'nav-number-selected' : ''
+          }`}
+          onClick={() => setPageNumber(i)}
+        >
           {i}
         </span>
       );
@@ -42,20 +49,28 @@ function Gallery() {
   return (
     <div className="App">
       <Header title="Mars Images By Date" />
+      {/* Default date to fetch is 2020-07-14 */}
+      {/* There are still issues with this date to show images */}
       <SearchBar setData={setImages} />
-      <div className="gallery-wrapper">
-        {/* I've preferred to show to user the loading images instead of a 'Loading' indicator as in 'About page' cause the data is a bit heavy */}
-        {imagesPerPage &&
-          imagesPerPage[pageNumber] &&
-          imagesPerPage[pageNumber].map((image: any) => {
-            return (
-              <div key={image?.id} className="image-item">
-                <Image width={175} src={image?.img_src} />
-              </div>
-            );
-          })}
+      <div className="gallery-container">
+        <div className="gallery-wrapper">
+          {/* I've preferred to show to user the loading images instead of a 'Loading'
+          indicator as in 'About page' cause the data is a bit heavy */}
+          {imagesPerPage &&
+            imagesPerPage[pageNumber] &&
+            imagesPerPage[pageNumber].map((image: any) => {
+              return (
+                // <Tooltip content={image?.id}>
+                <div key={image?.id} className="image-item">
+                  <Image width={175} src={image?.img_src} />
+                </div>
+                // </Tooltip>
+              );
+            })}
+        </div>
+        <div className="bottom-nav-bar">{imagesPerPage && bottomNavBar()}</div>
       </div>
-      <div className="bottom-nav-bar">{imagesPerPage && bottomNavBar()}</div>
+
       <div className="button-wrapper">
         <NavButton to="/" title={GO_HOME} />
       </div>

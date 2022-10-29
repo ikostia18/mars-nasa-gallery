@@ -32,6 +32,11 @@
   padding: 5px 10px;
 }
 
+.nav-number-selected {
+  color: #dfdfdf;
+  background-color: var(--themeMarsColorDark);
+}
+
 .button-wrapper {
   position: absolute;
   bottom: 0px;

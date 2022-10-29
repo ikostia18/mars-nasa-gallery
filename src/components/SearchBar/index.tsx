@@ -11,7 +11,7 @@ interface ISearchBar {
 }
 
 export const SearchBar: React.FC<ISearchBar> = (props: ISearchBar) => {
-  const [date, setDate] = useState('2020-07-14');
+  const [date, setDate] = useState<string>();
 
   const getImages = async () => {
     const url =
@@ -39,7 +39,7 @@ export const SearchBar: React.FC<ISearchBar> = (props: ISearchBar) => {
         onFocus={(e) => (e.target.type = 'date')}
         onBlur={(e) => (e.target.type = 'text')}
       />
-      <button className="search-button" onClick={() => getImages()}>
+      <button className="search-button" disabled={!date} onClick={() => getImages()}>
         Search
       </button>
     </div>
